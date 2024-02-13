@@ -155,7 +155,7 @@ fig_receitas_categorias.update_layout(yaxis_title = 'Receita')
 
 ## Visualização no Streamlit
 
-aba1, aba2, aba3 = st.tabs(["Receita", "Quantidade de Vendas", "Vendedores"])
+aba1, aba3 = st.tabs(["Receita", "Vendedores"])
 
 #Aba 1
 
@@ -173,18 +173,7 @@ with coluna2:
     st.plotly_chart(fig_receitas_categorias, use_container_width=True)
 
 
-#Aba 2 quantidade
-    
-with aba2:
-    coluna1, coluna2 = st.columns(2)
 
-with coluna1:
-    st.metric("Receita Total", formata_numero(dados['Preço'].sum(), 'R$'))
- 
-   
-with coluna2:
-    st.metric("Quantidade de Vendas", formata_numero(dados.shape[0]))
-   
 
 #Aba 3 vendedores
 
