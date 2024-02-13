@@ -172,7 +172,6 @@ with coluna2:
     st.plotly_chart(fig_receita_mensal, use_container_width=True)
     st.plotly_chart(fig_receitas_categorias, use_container_width=True)
 
-st.dataframe(dados) 
 
 #Aba 2 quantidade
     
